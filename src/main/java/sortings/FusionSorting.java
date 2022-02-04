@@ -1,3 +1,5 @@
+package sortings;
+
 import java.util.LinkedList;
 
 public class FusionSorting {

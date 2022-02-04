@@ -1,3 +1,5 @@
+package sortings;
+
 import utils.ArrayUtil;
 
 import java.util.ArrayList;
