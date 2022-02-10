@@ -1,17 +1,14 @@
-import sortings.HeapSortingEasy;
+import collection.Heap;
+import sortings.HeapSorting;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
     public static void main (String[] args) {
-        ArrayList<Integer> myArray = new ArrayList<>();
-        myArray.add(1);
-        myArray.add(6);
-        myArray.add(2);
-        myArray.add(1);
-        myArray.add(4);
-        System.out.println(myArray);
-        HeapSortingEasy sort = new HeapSortingEasy();
-        System.out.println(sort.sorting(myArray));
+        ArrayList<Integer> array = new ArrayList<>(Arrays.asList(10, 9, 11, 8, 7, 20, 1, 6, 12, 4));
+        System.out.println(array);
+        HeapSorting sorting = new HeapSorting();
+        System.out.println(sorting.sorting(array));
     }
 }
