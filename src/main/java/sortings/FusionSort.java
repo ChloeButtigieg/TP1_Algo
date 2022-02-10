@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 public class FusionSort {
 
-    private LinkedList<Integer> fusion(LinkedList<Integer> list1, LinkedList<Integer> list2) {
+    private static LinkedList<Integer> fusion(LinkedList<Integer> list1, LinkedList<Integer> list2) {
         LinkedList<Integer> fusion = new LinkedList<>();
         while (list1.size() != 0 && list2.size() != 0) {
             if (list1.getFirst() <= list2.getFirst()) {
@@ -23,7 +23,7 @@ public class FusionSort {
         return fusion;
     }
 
-    public LinkedList<Integer> sort(LinkedList<Integer> list) {
+    public static LinkedList<Integer> sort(LinkedList<Integer> list) {
         if (list.size() > 1) {
             LinkedList<Integer> list1 = new LinkedList<>();
             LinkedList<Integer> list2 = new LinkedList<>();

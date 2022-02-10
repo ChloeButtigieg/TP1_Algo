@@ -11,7 +11,7 @@ public class ArrayUtil {
     }
 
     public static int getMinIndex (ArrayList<Integer> array, int firstIndex, int secondIndex) {
-        if (array.get(firstIndex) < array.get(secondIndex)) return firstIndex;
+        if (array.get(firstIndex) <= array.get(secondIndex)) return firstIndex;
         return secondIndex;
     }
 

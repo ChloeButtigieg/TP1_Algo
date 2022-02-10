@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class QuickSort {
 
-    int flagDivision(ArrayList<Integer> array, int minIndex, int maxIndex, int pivotIndex) {
+    private static int flagDivision(ArrayList<Integer> array, int minIndex, int maxIndex, int pivotIndex) {
         int firstEqualElementIndex = pivotIndex;
         int currentPosition = pivotIndex + 1;
         int firstGreaterElementIndex = maxIndex + 1;
@@ -27,7 +27,7 @@ public class QuickSort {
         return pivotIndex;
     }
 
-    void sort(ArrayList<Integer> array, int minIndex, int maxIndex) {
+    public static void sort(ArrayList<Integer> array, int minIndex, int maxIndex) {
         if (minIndex < maxIndex) {
             int pivotIndex = flagDivision(array, minIndex, maxIndex, minIndex);
             sort(array, minIndex, pivotIndex - 1);

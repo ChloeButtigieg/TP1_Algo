@@ -27,6 +27,7 @@ public class Heap {
     private void updateAfterRemovingElement (int index) {
         int leftSonIndex = getLeftSonIndex(index);
         int rightSonIndex = getRightSonIndex(index);
+
         if (leftSonIndex == -1 && rightSonIndex != -1) {
             if (this.heap.get(index) > this.heap.get(leftSonIndex)) {
                 ArrayUtil.swap(this.heap, index, leftSonIndex);
