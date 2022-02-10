@@ -2,7 +2,7 @@ package sortings;
 
 import java.util.LinkedList;
 
-public class FusionSorting {
+public class FusionSort {
 
     private LinkedList<Integer> fusion(LinkedList<Integer> list1, LinkedList<Integer> list2) {
         LinkedList<Integer> fusion = new LinkedList<>();
@@ -23,7 +23,7 @@ public class FusionSorting {
         return fusion;
     }
 
-    public LinkedList<Integer> sorting(LinkedList<Integer> list) {
+    public LinkedList<Integer> sort(LinkedList<Integer> list) {
         if (list.size() > 1) {
             LinkedList<Integer> list1 = new LinkedList<>();
             LinkedList<Integer> list2 = new LinkedList<>();
@@ -34,8 +34,9 @@ public class FusionSorting {
                     list2.add(list.get(i));
                 }
             }
-            list1 = sorting(list1);
-            list2 = sorting(list2);
+
+            list1 = sort(list1);
+            list2 = sort(list2);
             list = fusion(list1, list2);
         }
         return list;

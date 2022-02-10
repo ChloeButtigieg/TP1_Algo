@@ -5,8 +5,8 @@ import collection.Heap;
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 
-public class HeapSorting {
-    public ArrayList<Integer> sortingEasy (ArrayList<Integer> array) {
+public class HeapSort {
+    public ArrayList<Integer> easySort (ArrayList<Integer> array) {
         PriorityQueue<Integer> heap = new PriorityQueue<>(array);
         ArrayList<Integer> sortedArray = new ArrayList<>();
         for (int i = 0; i < array.size(); i++) {
@@ -15,7 +15,7 @@ public class HeapSorting {
         return sortedArray;
     }
 
-    public ArrayList<Integer> sorting (ArrayList<Integer> array) {
+    public ArrayList<Integer> sort (ArrayList<Integer> array) {
         Heap heap = new Heap(array);
         ArrayList<Integer> sortedArray = new ArrayList<>();
         for (int i = 0; i < array.size(); i++) {
