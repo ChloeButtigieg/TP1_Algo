@@ -41,7 +41,7 @@ public class Heap {
         int leftSonIndex = getLeftSonIndex(index);
         int rightSonIndex = getRightSonIndex(index);
 
-        if (leftSonIndex == -1 && rightSonIndex != -1) {
+        if (leftSonIndex != -1 && rightSonIndex == -1) {
             if (this.heap.get(index) > this.heap.get(leftSonIndex)) {
                 ArrayUtil.swap(this.heap, index, leftSonIndex);
             }
