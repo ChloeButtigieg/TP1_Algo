@@ -13,7 +13,7 @@ public class Main {
 
     public static void main (String[] args) {
         testSorts(10);
-        compareTime(10000);
+        compareTime(100000);
     }
 
     private static void testSorts (int length) {
