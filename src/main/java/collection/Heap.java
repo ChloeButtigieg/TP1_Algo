@@ -9,9 +9,22 @@ public class Heap {
 
     public Heap (ArrayList<Integer> array) {
         for (int index = 0; index < array.size(); index++) {
-            this.heap.add(array.get(index));
-            updateAfterAddingElement(index);
+            add(array.get(index));
         }
+    }
+
+    public void add (Integer element) {
+        this.heap.add(element);
+        updateAfterAddingElement(this.heap.size() - 1);
+    }
+
+    public Integer poll () {
+        if (this.heap.isEmpty()) return null;
+
+        ArrayUtil.swap(this.heap, 0, this.heap.size() - 1);
+        Integer removedElement = this.heap.remove(this.heap.size() - 1);
+        updateAfterRemovingElement(0);
+        return removedElement;
     }
 
     private void updateAfterAddingElement (int index) {
@@ -63,14 +76,5 @@ public class Heap {
         int sonIndex = 2 * indexFather + 1;
         if (sonIndex >= this.heap.size()) return -1;
         return sonIndex;
-    }
-
-    public Integer poll () {
-        if (this.heap.isEmpty()) return null;
-
-        ArrayUtil.swap(this.heap, 0, this.heap.size() - 1);
-        Integer removedElement = this.heap.remove(this.heap.size() - 1);
-        updateAfterRemovingElement(0);
-        return removedElement;
     }
 }
