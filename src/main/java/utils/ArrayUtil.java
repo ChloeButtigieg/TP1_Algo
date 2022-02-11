@@ -1,7 +1,6 @@
 package utils;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 public class ArrayUtil {
     public static void swap (ArrayList<Integer> array, int i, int j) {
@@ -15,19 +14,11 @@ public class ArrayUtil {
         return secondIndex;
     }
 
-    public static ArrayList<Integer> createArrayList (int nbOfElement) {
+    public static ArrayList<Integer> createArrayList (int length) {
         ArrayList<Integer> array = new ArrayList<>();
-        for (int i = 0; i < nbOfElement; i++) {
+        for (int i = 0; i < length; i++) {
             array.add((int) (Math.random() * 101));
         }
         return array;
-    }
-
-    public static LinkedList<Integer> createLinkedList (int nbOfElement) {
-        LinkedList<Integer> list = new LinkedList<>();
-        for (int i = 0; i < nbOfElement; i++) {
-            list.add((int) (Math.random() * 101));
-        }
-        return list;
     }
 }

@@ -12,13 +12,15 @@ public class Main {
     private static final Timer TIMER = new Timer();
 
     public static void main (String[] args) {
-        sorts(10);
-        //compareTime(10000);
+        testSorts(10);
+        compareTime(10000);
     }
 
-    private static void sorts (int length) {
+    private static void testSorts (int length) {
+        System.out.println("\n*** TEST SORTS ***\n");
+
         ArrayList<Integer> array = ArrayUtil.createArrayList(length);
-        System.out.println("\nBubbleSort :\n" + array + "\n" + bubbleSort(array));
+        System.out.println("BubbleSort :\n" + array + "\n" + bubbleSort(array));
 
         array = ArrayUtil.createArrayList(length);
         System.out.println("\nFusionSort :\n" + array + "\n" + fusionSort(array));
